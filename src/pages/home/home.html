@@ -69,7 +69,7 @@
   </div>
   <div id="score" *ngIf = "done === true">
     <div id="time">{{timerValue}}s</div>
-    <div id="results">{{score}}/5</div>
+    <div id="results"><b>Your Score</b><br>{{score}}/5</div>
     <button ion-button (click) = "reset()">Restart</button>
   </div>
    

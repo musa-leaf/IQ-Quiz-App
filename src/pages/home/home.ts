@@ -57,6 +57,7 @@ export class HomePage {
     this.done = false;
     this.counter = 0;
     this.score = 0;
+    this.answersUser = ['a1', 'a2','a3','a4','a5'];
 
   }
 
