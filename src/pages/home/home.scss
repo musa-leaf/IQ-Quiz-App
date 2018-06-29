@@ -2,12 +2,12 @@ page-home {
    
     #landing{
         
-        margin-top: calc(50% - 225px);
+        margin-top:  0px;
         width: 100%;
         height: 450px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         h3{
             font-size: 2em;
@@ -153,6 +153,55 @@ page-home {
         100%{
             opacity: 1;
             transform: translateY(0px);
+        }
+    }
+
+    #score{
+        top:  0px;
+        width: 100%;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        #results{
+            font-size: 4em;
+            text-align: center;
+            color: #29334e;
+            display: block;
+            border-radius: 50%;
+            line-height: 250px;
+            width: 250px;
+            background: rgba(82, 167, 167, 0.85);
+            border: 10px solid #29334e;
+            height: 250px;
+            margin-top: -70px;
+        }
+
+        #time{
+            position: relative;
+            left: -85px;
+            top: 0px;
+            font-size: 2em;
+            line-height: 60px;
+            text-align: center;
+            color: #29334e;
+            display: block;
+            border-radius: 50%;
+            width: 70px;
+            background: rgb(82, 167, 167);
+            border: 5px solid #29334e;
+            height: 70px;
+        }
+
+        button{
+            background: transparent;
+            border:none;
+            padding: 20px;
+            color:#29334e;
+            border: 2px solid;
+            border-radius: 15px;
+            margin-top: 20px;
         }
     }
 }
