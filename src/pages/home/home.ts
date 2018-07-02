@@ -14,9 +14,10 @@ export class HomePage {
   timerValue : number = 0;
   counter : number = 0;
   score : number = 0;
-  done : boolean = true;
-  answersUser = ['a1', 'a2','a3','a4','a5'];
-  answers = ['aTrue','bFalse','cFalse','dTrue','eTrue'];
+  done : boolean = false;
+  answersUser = ["ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph"];
+  answers = ['true','false','false','true','true','true','false','false','true','true','true','false','false','true','true'];
+
 
   constructor(public navCtrl: NavController) {
 
@@ -33,8 +34,11 @@ export class HomePage {
   }
   
   proceed(){
-    if(this.counter < 5)
+    console.log(this.answers.length);
+    if(this.counter < 15)
       this.counter++;
+
+    
   }
 
   scoreTracker(arg){
@@ -50,15 +54,14 @@ export class HomePage {
     }
     
     this.done = true;
-    this.counter = 6;
+    this.counter = 16;
   }
 
   reset(){
     this.done = false;
     this.counter = 0;
     this.score = 0;
-    this.answersUser = ['a1', 'a2','a3','a4','a5'];
-
+    this.answersUser = ["ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph"];
   }
 
 }
