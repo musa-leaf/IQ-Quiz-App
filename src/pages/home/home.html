@@ -181,6 +181,14 @@
     <div id="time">{{timerValue}}s</div>
     <div id="results"><b>Your Score</b><br>{{score}}/15</div>
     <button ion-button (click) = "reset()">Restart</button>
+    <div class="results-table">
+      <div class="row">
+        <div *ngFor="let x of scores">
+          <span id = "wrong" *ngIf = "x == 0">{{x}}</span>
+          <span id = "right" *ngIf = "x == 1">{{x}}</span>
+        </div>
+      </div>
+    </div>
   </div>
    
 

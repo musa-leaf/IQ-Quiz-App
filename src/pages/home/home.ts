@@ -12,9 +12,11 @@ export class HomePage {
 
   timerObject: any;
   timerValue : number = 0;
-  counter : number = 0;
+  counter : number = 16;
+  dispalyCounter: number = 0;
   score : number = 0;
-  done : boolean = false;
+  done : boolean = true;
+  scores = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   answersUser = ["ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph"];
   answers = ['true','false','false','true','true',
              'true','false','false','false','false',
@@ -52,6 +54,7 @@ export class HomePage {
     for(let i = 0; i < this.answers.length; i++ ){
       if(this.answersUser[i] === this.answers[i]){
         this.score++;
+        this.scores[i] = 1;
       }
     }
     
@@ -63,7 +66,10 @@ export class HomePage {
     this.done = false;
     this.counter = 0;
     this.score = 0;
-    this.answersUser = ["ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph"];
+    for(let i = 0; i < this.answers.length; i++ ){
+      this.scores[i] = 0;
+      this.answersUser[i] = "ph"; 
+    }
   }
 
 }
