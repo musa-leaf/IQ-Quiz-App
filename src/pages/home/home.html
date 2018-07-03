@@ -179,7 +179,13 @@
 
   <div id="score" *ngIf = "counter > 0 && done === true">
     <div id="time">{{timerValue}}s</div>
-    <div id="results"><b>Your Score</b><br>{{score}}/15</div>
+    <div id="results"><b>Your Score</b><br>{{score}}/15 <br>
+      <div class="stars">
+        <ion-icon class = "star" name="star" *ngIf = "score > 5"></ion-icon>
+        <ion-icon class = "star" name="star" *ngIf = "score > 9"></ion-icon>
+        <ion-icon class = "star" name="star" *ngIf = "score > 12"></ion-icon>
+      </div>
+    </div>
     <button ion-button (click) = "reset()">Restart</button>
     <div class="results-table">
       <div class="row">

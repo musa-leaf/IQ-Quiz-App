@@ -12,10 +12,10 @@ export class HomePage {
 
   timerObject: any;
   timerValue : number = 0;
-  counter : number = 16;
+  counter : number = 0;
   dispalyCounter: number = 0;
   score : number = 0;
-  done : boolean = true;
+  done : boolean = false;
   scores = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   answersUser = ["ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph"];
   answers = ['true','false','false','true','true',
