@@ -16,7 +16,10 @@ export class HomePage {
   score : number = 0;
   done : boolean = false;
   answersUser = ["ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph", "ph"];
-  answers = ['true','false','false','true','true','true','false','false','true','true','true','false','false','true','true'];
+  answers = ['true','false','false','true','true',
+             'true','false','false','false','false',
+             'false','true','true','false','true'
+            ];
 
 
   constructor(public navCtrl: NavController) {
@@ -34,7 +37,6 @@ export class HomePage {
   }
   
   proceed(){
-    console.log(this.answers.length);
     if(this.counter < 15)
       this.counter++;
 
