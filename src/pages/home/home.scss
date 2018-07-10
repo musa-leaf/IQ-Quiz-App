@@ -85,12 +85,13 @@ page-home {
         justify-content: center;
         align-items: center;
         margin-top: 20px;
-        background: rgba(222,222,222,0.9);
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
         padding-bottom: 20px;
         animation: bounceIn 0.5s ease-in;
         position: relative;
         top: 0px;
-        height: 350px;
+        height: 320px;
+        background: rgba(82, 167, 167, 0.2);
 
         h1{
             position: absolute;
@@ -121,6 +122,7 @@ page-home {
             position: absolute;
             bottom: 10px;
             background: #00bcd4;
+            height: 40px;
         }
 
         .btn-row{
@@ -134,6 +136,7 @@ page-home {
 
             button{
                 width: 45%;
+                height: 40px;
             }
         }
     }

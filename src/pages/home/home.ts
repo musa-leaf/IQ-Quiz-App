@@ -28,27 +28,28 @@ export class HomePage {
 
   }
 
+  //on quiz start
   onStart(){
     this.timerObject = Observable.interval(1000).subscribe(
       x => {
         this.timerValue = x;
       }
     );
-
     this.proceed();
   }
   
+  //next question
   proceed(){
     if(this.counter < 15)
-      this.counter++;
-
-    
+      this.counter++; 
   }
 
+  //track user score
   scoreTracker(arg){
     this.answersUser[this.counter-1] = arg;
   }
 
+  //calculate and display final results
   viewResults(){
     this.timerObject.unsubscribe();
     for(let i = 0; i < this.answers.length; i++ ){
@@ -57,11 +58,11 @@ export class HomePage {
         this.scores[i] = 1;
       }
     }
-    
     this.done = true;
     this.counter = 16;
   }
 
+  //reset counters
   reset(){
     this.done = false;
     this.counter = 0;
